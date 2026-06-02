@@ -2,8 +2,6 @@
 builder = "railpack"
 
 [deploy]
-preDeployCommand = "php artisan storage:link && php artisan migrate --force"
-healthcheckPath = "/login"
-healthcheckTimeout = 100
+preDeployCommand = "php artisan migrate --force"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
